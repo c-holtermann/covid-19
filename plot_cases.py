@@ -169,7 +169,7 @@ def make_comparison_plot(countries, normalize=False):
 
 
 # The country to plot the data for.
-country = 'Austria'
+country = 'Germany'
 #country = 'United States'
 #country = 'Iran'
 #country = 'United Kingdom'
