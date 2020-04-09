@@ -1,4 +1,5 @@
 import sys
+import datetime
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -18,6 +19,9 @@ MAX_DAYS = 40
 
 PLOT_TYPE = 'deaths'
 #PLOT_TYPE = 'confirmed cases'
+
+SHOW_PLOT = False
+SAVE_PLOT = True
 
 # These are the GitHub URLs for the Johns Hopkins data in CSV format.
 if PLOT_TYPE == 'confirmed cases':
@@ -167,6 +171,11 @@ def make_comparison_plot(countries, normalize=False):
 
     ax.legend()
 
+if PLOT_TYPE == "deaths":
+    plot_type_filename = PLOT_TYPE
+else:
+    plot_type_filename = "cases"
+plot_date_filename = f"{datetime.datetime.now():%Y%m%d}"
 
 # The country to plot the data for.
 country = 'Germany'
@@ -175,9 +184,16 @@ country = 'Germany'
 #country = 'United Kingdom'
 #country = 'China'
 make_bar_plot(country)
-plt.show()
+
+if SAVE_PLOT:
+    plt.savefig('imgdir/' + country.lower() + "-" + plot_date_filename + "-" + plot_type_filename + '.png', dpi=200)
+if SHOW_PLOT:
+    plt.show()
 
 countries = ['Italy', 'Spain', 'United Kingdom', 'United States',
              'France', 'South Korea', 'China', 'Austria', 'Iran', 'Germany']
 make_comparison_plot(countries, normalize=False)
-plt.show()
+if SAVE_PLOT:
+   plt.savefig('imgdir/' + 'country-comparison-' + plot_date_filename + "-" + plot_type_filename + '.png', dpi=200)
+if SHOW_PLOT:
+    plt.show()
