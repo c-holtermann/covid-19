@@ -178,6 +178,6 @@ make_bar_plot(country)
 plt.show()
 
 countries = ['Italy', 'Spain', 'United Kingdom', 'United States',
-             'Japan', 'France', 'South Korea', 'China', 'Austria', 'Iran']
+             'France', 'South Korea', 'China', 'Austria', 'Iran', 'Germany']
 make_comparison_plot(countries, normalize=False)
 plt.show()
