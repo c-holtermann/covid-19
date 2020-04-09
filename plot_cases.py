@@ -110,7 +110,7 @@ def make_comparison_plot(countries, normalize=False):
     
     # Plot the data.
     fig = plt.figure()
-    ax = fig.add_subplot()
+    ax = fig.add_subplot(111)
     for country, ser in c_df.iteritems():
         ax.plot(range(len(ser)), np.log10(ser.values), label=country)
 
