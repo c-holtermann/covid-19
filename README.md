@@ -6,4 +6,4 @@ More details [on original authors (xnx) scipython.com blog article page](https:/
 ![COVID-19 death data for Germany](imgdir/germany-20200409-deaths.png)
 ![COVID-19 death trends for 10 countries](imgdir/country-comparison-20200409-deaths.png)
 ![COVID-19 case data for Germany](imgdir/germany-20200409-cases.png)
-![COVID-19 case trends for 10 countries](imgdir/country-comparison-20200409.png)
+![COVID-19 case trends for 10 countries](imgdir/country-comparison-20200409-cases.png)
