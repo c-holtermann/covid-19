@@ -15,7 +15,7 @@ READ_FROM_URL = True
 MIN_CASES = 100
 
 # Plot for MAX_DAYS days after the day on which each country reaches MIN_CASES.
-MAX_DAYS = 65
+MAX_DAYS = 90
 
 #PLOT_TYPE = 'deaths'
 PLOT_TYPE = 'confirmed cases'
